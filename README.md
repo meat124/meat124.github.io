@@ -1,1 +1,3 @@
-This is the source code to Jon Barron's public academic website: https://jonbarron.info/. Feel free to clone this code for your own personal use.
+Hyunjin Park's academic homepage: https://meat124.github.io/
+
+Template based on [Jon Barron's website](https://github.com/jonbarron/jonbarron_website).
