@@ -140,3 +140,22 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+
+.entry-logo-cell {
+  padding: 8px 8px 8px 16px;
+  width: 84px;
+  vertical-align: middle;
+}
+
+.entry-content-cell {
+  padding: 8px 16px 8px 8px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.entry-logo {
+  display: block;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
