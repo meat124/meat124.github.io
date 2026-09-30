@@ -159,3 +159,33 @@ span.highlight {
   height: 60px;
   object-fit: contain;
 }
+/* Logo drawn on a transparent/white circle: outline it so it reads at the same size as the others. */
+.entry-logo.logo-ring {
+  box-sizing: border-box;
+  border: 1px solid #d6d6d6;
+  border-radius: 50%;
+}
+
+/* Publications / Awards rows: thumbnail on the left, text on the right. */
+.media-cell {
+  padding: 8px 8px 8px 16px;
+  width: 29%;
+  vertical-align: middle;
+}
+
+.media-cell img {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.media-content-cell {
+  padding: 8px 16px;
+  width: 71%;
+  vertical-align: middle;
+}
+
+.media-content-cell ul {
+  margin: 6px 0;
+  padding-left: 18px;
+}
