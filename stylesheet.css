@@ -35,12 +35,12 @@
 
 /* Layout: every section hangs off the same left and right edges.
    Rows with a small marker (News dates, Education/Experience logos) share --rail;
-   rows with a picture (Publications, Awards) share --media. Pictures are as tall as the text beside them. */
+   rows with a picture (Publications, Awards) share --media. */
 :root {
-  --page: 760px;
+  --page: 880px;
   --rail: 72px;
   --rail-gap: 20px;
-  --media: 288px;
+  --media: 304px;
   --media-gap: 28px;
   --portrait: 200px;
   --radius: 10px;
@@ -213,14 +213,16 @@ h1 {
 
 .portrait,
 .entry-media {
-  position: relative;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius);
 }
 
-.portrait img,
-.entry-media img {
+.portrait {
+  position: relative;
+}
+
+.portrait img {
   position: absolute;
   top: 0;
   left: 0;
@@ -354,11 +356,12 @@ h2 {
   margin: 14px 0 0 calc(var(--rail) + var(--rail-gap));
 }
 
-/* Publications / Awards: picture on the left, text on the right. */
+/* Publications / Awards: picture on the left, text on the right. Pictures keep their own proportions. */
 .entry {
   display: grid;
   grid-template-columns: var(--media) minmax(0, 1fr);
   column-gap: var(--media-gap);
+  align-items: start;
 }
 
 .entry + .entry {
@@ -367,11 +370,16 @@ h2 {
 
 .entry-media {
   display: block;
-  min-height: calc(var(--media) * 9 / 16);
+}
+
+.entry-media img {
+  width: 100%;
+  height: auto;
 }
 
 .entry h3 {
   margin-top: -3px; /* puts the title's cap height on the picture's top edge */
+  text-wrap: balance;
   color: var(--ink);
   font-size: var(--text);
   font-weight: 600;
@@ -480,6 +488,13 @@ footer {
   font-size: var(--text-xs);
 }
 
+/* Between phone and desktop widths, a narrower picture leaves the text beside it room to breathe. */
+@media (max-width: 800px) {
+  :root {
+    --media: 240px;
+  }
+}
+
 @media (max-width: 640px) {
   :root {
     --text-name: 32px;
@@ -515,11 +530,6 @@ footer {
     row-gap: 16px;
   }
 
-  .entry-media {
-    min-height: 0;
-    aspect-ratio: 4 / 3;
-  }
-
   .entry h3 {
     margin-top: 0;
   }
@@ -537,6 +547,7 @@ footer {
   .row-date {
     grid-column: 2;
     text-align: left;
+    white-space: normal;
   }
 
   .row-date br {
