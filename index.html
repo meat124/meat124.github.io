@@ -6,181 +6,226 @@
     <title>Hyunjin Park</title>
 
     <meta name="author" content="Hyunjin Park">
+    <meta name="description" content="Hyunjin Park is an M.S. student in Artificial Intelligence at Yonsei University, working on robotic foundation models.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=2">
+
+    <!-- Apply the saved theme (or the system preference) before first paint. -->
+    <script>
+      (function () {
+        var saved = null;
+        try { saved = localStorage.getItem('theme'); } catch (e) {}
+        var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=4">
   </head>
 
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Hyunjin Park
-                </p>
-                <p>
-                  I am an M.S. student in Artificial Intelligence at Yonsei University, advised by <a href="https://mlcs.yonsei.ac.kr/Professor.html">Prof. Jongeun Choi</a>. I also obtained a B.S. degree in Mechanical Engineering from Yonsei University.
-                </p>
-                <p>
-                  My research interests lie in <strong>Robotic Foundation Models</strong>. I aim to build generalist robot policies on top of foundation models &mdash; robots that can work alongside people and help out in our everyday lives.
-                </p>
-                <p style="text-align:center">
-                  <a href="mailto:meat124@yonsei.ac.kr">Email</a> &nbsp/&nbsp
-                  <!-- <a href="data/CV.pdf">CV</a> &nbsp/&nbsp -->
-                  <a href="https://github.com/meat124">Github</a>
-                </p>
-              </td>
-              <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/profile.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/profile.jpg" class="hoverZoomLink"></a>
-              </td>
-            </tr>
-          </tbody></table>
-          
-          <!-- Publications -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Publications</h2>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td class="media-cell">
-                <a href="https://meat124.github.io/CoHuB/"><img src="images/cohub.jpg" alt="CoHuB teaser"></a>
-              </td>
-              <td class="media-content-cell">
-                <a href="https://meat124.github.io/CoHuB/"><span class="papertitle">CoHuB: A Simulation Benchmark for Multi-Humanoid Collaboration</span></a>
-                <br><strong>Hyunjin Park</strong>*&dagger;, Jebeom Chae*, Minwoo Park*, Sunghyun Park, Hanjun Yoo, Seoyeon Choi, Soochul Yoo, Joohwan Seo, Sarmad Idrees, Jae-Sang Hyun, Jongmin Lee, Roberto Horowitz, Youngwoon Lee, Jongeun Choi
-                <br><em>*Co-first authors, &dagger;Project lead</em>
-                <br><em>NeurIPS 2026 Robot Learning Workshop</em>; full version under review
-                <br>
-                <a href="https://meat124.github.io/CoHuB/">Project Page</a>
-                &nbsp/&nbsp <a href="https://arxiv.org/abs/2609.34782">arXiv</a>
-              </td>
-            </tr>
-          </tbody></table>
+    <div class="page">
 
-          <!-- Education -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Education</h2>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td class="entry-logo-cell">
-                <img src="images/yonsei.png" alt="Yonsei University logo" class="entry-logo">
-              </td>
-              <td class="entry-content-cell">
-                <strong>Yonsei University</strong>, Seoul, South Korea
-                <br>M.S. in Artificial Intelligence (Advisor: Prof. Jongeun Choi)
-                <br><em>Mar. 2025 &ndash; Feb. 2027 (Expected)</em>
-              </td>
-            </tr>
-            <tr>
-              <td class="entry-logo-cell">
-                <img src="images/yonsei.png" alt="Yonsei University logo" class="entry-logo">
-              </td>
-              <td class="entry-content-cell">
-                <strong>Yonsei University</strong>, Seoul, South Korea
-                <br>B.S. in Mechanical Engineering
-                <br><em>Mar. 2018 &ndash; Feb. 2025</em>
-              </td>
-            </tr>
-          </tbody></table>
+      <nav class="topbar" aria-label="Sections">
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#awards">Awards</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+      </nav>
 
-          <!-- Experience -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Experience</h2>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td class="entry-logo-cell">
-                <img src="images/yai_logo_circle.webp" alt="YAI logo" class="entry-logo logo-ring">
-              </td>
-              <td class="entry-content-cell">
-                <strong>YAI (Yonsei University Artificial Intelligence Club)</strong>
-                <br>Robot Learning Team Leader
-                <br><em>Jul. 2023 &ndash; Dec. 2024</em>
-              </td>
-            </tr>
-            <tr>
-              <td class="entry-logo-cell">
-                <img src="images/morgorithm.svg" alt="Morgorithm icon" class="entry-logo logo-ring">
-              </td>
-              <td class="entry-content-cell">
-                <strong>Morgorithm (Yonsei University Algorithm Problem Solving Club)</strong>
-                <br>Member
-                <br><em>Jan. 2023 &ndash; Jan. 2024</em>
-              </td>
-            </tr>
-            <tr>
-              <td class="entry-logo-cell">
-                <img src="images/soccerpub.svg" alt="SoccerPub icon" class="entry-logo logo-ring">
-              </td>
-              <td class="entry-content-cell">
-                <strong>SoccerPub (Sinchon Intercollegiate Football Supporters' Club)</strong>
-                <br>President
-                <br><em>Jul. 2020 &ndash; Dec. 2023</em>
-              </td>
-            </tr>
-          </tbody></table>
+      <header class="intro">
+        <div class="intro-text">
+          <h1>Hyunjin Park</h1>
+          <p class="role">Department of Artificial Intelligence, Yonsei University</p>
+          <p>
+            Hi! I am an M.S. student in Artificial Intelligence at Yonsei University, advised by <a href="https://mlcs.yonsei.ac.kr/Professor.html">Prof. Jongeun Choi</a>. I also obtained a B.S. degree in Mechanical Engineering from Yonsei University.
+          </p>
+          <p>
+            My research interests lie in <strong>Robotic Foundation Models</strong>. I aim to build generalist robot policies on top of foundation models&nbsp;&mdash; robots that can work alongside people and help out in our everyday lives.
+          </p>
+        </div>
+        <div class="portrait"><img src="images/profile.jpg" alt="Hyunjin Park"></div>
+      </header>
 
-          <!-- Awards & Honors -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Awards &amp; Honors</h2>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td class="media-cell">
-                <img src="images/cartrasche.png" alt="CARTRASCHE cart robot">
-              </td>
-              <td class="media-content-cell">
-                <strong>Autonomous Driving Auxiliary Cart Robot for Assembly Process</strong>
-                <br>Minjun Chang, Wonjun Kim, <strong>Hyunjin Park</strong>, Meedeum Cho, Hyunjun Kim
-                <br><em>*All contributors participated equally in this work.</em>
-                <ul>
-                  <li><strong>Grand Prize (1st place)</strong>, 2024 National ICT Smart Device Competition
-                    <br>Minister of Science and ICT Award</li>
-                  <li><strong>Grand Prize (1st place)</strong>, 2024 Yonsei University Student Startup Competition</li>
-                  <li><strong>2nd place</strong>, 2024 Yonsei University Class Achievement and Idea Contest</li>
-                </ul>
-                <a href="https://www.youtube.com/watch?v=4_D-vN_osZ8">Video</a> &nbsp/&nbsp
-                <a href="https://github.com/Cartrasche-CreativeProductDesign">Code</a> &nbsp/&nbsp
-                <a href="https://me.yonsei.ac.kr/me/community/news.do?mode=view&articleNo=210032&article.offset=0&articleLimit=10">News</a> &nbsp/&nbsp
-                <a href="https://venture.yonsei.ac.kr/community/notice/207">Announcement</a>
-              </td>
-            </tr>
-          </tbody></table>
+      <ul class="links">
+        <li><a class="btn" href="mailto:meat124@yonsei.ac.kr">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>Email</a></li>
+        <li><a class="btn" href="data/CV_Hyunjin_Park.pdf">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>CV</a></li>
+        <li><a class="btn" href="https://scholar.google.com/citations?user=xcWvt9EAAAAJ&hl=en">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>Google Scholar</a></li>
+        <li><a class="btn" href="https://github.com/meat124">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.9c-2.78.62-3.37-1.21-3.37-1.21-.46-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.85.09-.66.35-1.12.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9l-.01 2.81c0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>GitHub</a></li>
+        <li><a class="btn" href="https://www.linkedin.com/in/hyunjin-park-732901326">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
+      </ul>
 
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:right;font-size:small;">
-                  Design and source code from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
+      <main>
 
-        </td>
-      </tr>
-    </table>
+        <!-- News: newest first.
+             To add an item, copy one <li> line, paste it at the top, and edit the date and the text.
+             Only the newest `data-limit` items are shown; older ones fold behind a "Show all" button. -->
+        <section id="news">
+          <h2>News</h2>
+          <ul class="news" data-limit="5">
+            <li><time datetime="2026-09">Sep 2026</time><p><a href="https://meat124.github.io/CoHuB/">CoHuB</a> was accepted to the <strong>NeurIPS 2026 Robot Learning Workshop (WRL)</strong>.</p></li>
+            <li><time datetime="2025-03">Mar 2025</time><p>Started my M.S. in Artificial Intelligence at Yonsei University, advised by <a href="https://mlcs.yonsei.ac.kr/Professor.html">Prof.&nbsp;Jongeun&nbsp;Choi</a>.</p></li>
+          </ul>
+        </section>
+
+        <!-- Publications -->
+        <section id="publications">
+          <h2>Publications</h2>
+          <article class="entry">
+            <a class="entry-media" href="https://meat124.github.io/CoHuB/"><img src="images/cohub.jpg" alt="CoHuB teaser"></a>
+            <div>
+              <h3><a href="https://meat124.github.io/CoHuB/">CoHuB: A Simulation Benchmark for Multi-Humanoid Collaboration</a></h3>
+              <p class="authors"><b>Hyunjin Park</b>*&dagger;, Jebeom Chae*, Minwoo Park*, Sunghyun Park, Hanjun Yoo, Seoyeon Choi, Soochul Yoo, Joohwan Seo, Sarmad Idrees, Jae-Sang Hyun, Jongmin Lee, Roberto Horowitz, Youngwoon Lee, Jongeun Choi</p>
+              <p class="note">*Co-first authors, &dagger;Project lead</p>
+              <p class="venue"><b>NeurIPS 2026 Robot Learning Workshop</b>; full version under review</p>
+              <ul class="actions">
+                <li><a class="btn btn-sm" href="https://meat124.github.io/CoHuB/">Project Page</a></li>
+                <li><a class="btn btn-sm" href="https://arxiv.org/abs/2609.34782">arXiv</a></li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <!-- Education -->
+        <section id="education">
+          <h2>Education</h2>
+          <ul class="rows">
+            <li>
+              <img class="logo" src="images/yonsei.png" alt="Yonsei University logo" width="48" height="48">
+              <div>
+                <p class="row-title">Yonsei University <span>&middot; Seoul, South Korea</span></p>
+                <p class="row-sub">M.S. in Artificial Intelligence (Advisor: Prof. Jongeun Choi)</p>
+              </div>
+              <p class="row-date">Mar 2025 &ndash; Feb 2027 <br><small>(expected)</small></p>
+            </li>
+            <li>
+              <img class="logo" src="images/yonsei.png" alt="Yonsei University logo" width="48" height="48">
+              <div>
+                <p class="row-title">Yonsei University <span>&middot; Seoul, South Korea</span></p>
+                <p class="row-sub">B.S. in Mechanical Engineering</p>
+              </div>
+              <p class="row-date">Mar 2018 &ndash; Feb 2025</p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience">
+          <h2>Experience</h2>
+          <ul class="rows">
+            <li>
+              <img class="logo logo-ring" src="images/yai_logo_circle.webp" alt="YAI logo" width="48" height="48">
+              <div>
+                <p class="row-title">YAI <span>&middot; Yonsei University Artificial Intelligence Club</span></p>
+                <p class="row-sub">Robot Learning Team Leader</p>
+              </div>
+              <p class="row-date">Jul 2023 &ndash; Dec 2024</p>
+            </li>
+            <li>
+              <img class="logo logo-ring" src="images/morgorithm.svg" alt="Morgorithm icon" width="48" height="48">
+              <div>
+                <p class="row-title">Morgorithm <span>&middot; Yonsei University Algorithm Problem Solving Club</span></p>
+                <p class="row-sub">Member</p>
+              </div>
+              <p class="row-date">Jan 2023 &ndash; Jan 2024</p>
+            </li>
+            <li>
+              <img class="logo logo-ring" src="images/soccerpub.svg" alt="SoccerPub icon" width="48" height="48">
+              <div>
+                <p class="row-title">SoccerPub <span>&middot; Sinchon Intercollegiate Football Supporters' Club</span></p>
+                <p class="row-sub">President</p>
+              </div>
+              <p class="row-date">Jul 2020 &ndash; Dec 2023</p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Awards & Honors -->
+        <section id="awards">
+          <h2>Awards &amp; Honors</h2>
+          <article class="entry">
+            <div class="entry-media"><img src="images/cartrasche.png" alt="CARTRASCHE cart robot"></div>
+            <div>
+              <h3>Autonomous Driving Auxiliary Cart Robot for Assembly Process</h3>
+              <p class="authors">Minjun Chang, Wonjun Kim, <b>Hyunjin Park</b>, Meedeum Cho, Hyunjun Kim</p>
+              <p class="note">*All contributors participated equally in this work.</p>
+              <ul class="honors">
+                <li><strong>Grand Prize (1st place)</strong>, 2024 National ICT Smart Device Competition &mdash; Minister of Science and ICT Award</li>
+                <li><strong>Grand Prize (1st place)</strong>, 2024 Yonsei University Student Startup Competition</li>
+                <li><strong>2nd place</strong>, 2024 Yonsei University Class Achievement and Idea Contest</li>
+              </ul>
+              <ul class="actions">
+                <li><a class="btn btn-sm" href="https://www.youtube.com/watch?v=1v0OGuhVNxE">Video</a></li>
+                <li><a class="btn btn-sm" href="https://github.com/Cartrasche-CreativeProductDesign">Code</a></li>
+                <li><a class="btn btn-sm" href="https://me.yonsei.ac.kr/me/community/news.do?mode=view&articleNo=210032&article.offset=0&articleLimit=10">News</a></li>
+                <li><a class="btn btn-sm" href="https://venture.yonsei.ac.kr/community/notice/207">Announcement</a></li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+      </main>
+
+      <footer>
+        &copy; Hyunjin Park<span id="updated"></span>
+      </footer>
+
+    </div>
+
+    <script>
+      (function () {
+        var root = document.documentElement;
+
+        // Theme toggle: remember the visitor's choice, otherwise keep following the system.
+        function saved() { try { return localStorage.getItem('theme'); } catch (e) { return null; } }
+        document.querySelector('.theme-toggle').addEventListener('click', function () {
+          var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) {}
+        });
+        var system = window.matchMedia('(prefers-color-scheme: dark)');
+        if (system.addEventListener) system.addEventListener('change', function (e) {
+          if (!saved()) root.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+        });
+
+        // News: fold items past data-limit behind a "Show all" button.
+        var news = document.querySelector('.news');
+        var items = [].slice.call(news.children);
+        var limit = parseInt(news.getAttribute('data-limit'), 10) || items.length;
+        if (items.length > limit) {
+          var older = items.slice(limit);
+          older.forEach(function (li) { li.hidden = true; });
+          var more = document.createElement('button');
+          more.type = 'button';
+          more.className = 'btn btn-sm news-more';
+          more.textContent = 'Show all (' + items.length + ')';
+          more.addEventListener('click', function () {
+            older.forEach(function (li) { li.hidden = false; });
+            more.parentNode.removeChild(more);
+          });
+          news.parentNode.insertBefore(more, news.nextSibling);
+        }
+
+        // Footer: "Last updated" follows the file's modification date.
+        var modified = new Date(document.lastModified);
+        if (!isNaN(modified)) {
+          document.getElementById('updated').textContent =
+            ' · Last updated ' + modified.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+        }
+      })();
+    </script>
   </body>
 </html>
